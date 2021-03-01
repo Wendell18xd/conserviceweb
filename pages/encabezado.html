@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Ingresos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gastos.html">Gastos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="caja.html">Caja</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="entrega.html">Entrega</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <button type="button" onclick="perfil()" class="btn btn-secondary" data-bs-toggle="modal"
+                    data-bs-target="#sesion"> <i class="far fa-user"></i>
+                </button>
+                <button class="btn btn-danger btn-sm ml-2" onclick="cerrar()">Salir</button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Modal sesion -->
+<div  class="modal fade" id="sesion" tabindex="-1" aria-labelledby="sesion" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sesion">Mi Perfil</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-header">
+                        Perfil
+                    </div>
+                    <div class="card-body">
+                        <form id="formsesion" autocomplete="off">
+                            <div id="image-upload" class="text-center">
+                                <label for="my_file">
+                                    <img id="urlfoto" src="../img/usuarios.png" width="150px" height="150px"
+                                        class="rounded img-thumbnail">
+                                </label>
+                                <input type="file" id="my_file" style="display: none;">
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">Usuario</label>
+                                <input id="user" class="form-control" type="text" readonly>
+                            </div>
+                            <label for="checkpass">Cambiar contraseña..</label>
+                            <input type="checkbox" id="checkpass" onclick="checboxpass()">
+                            <div class="form-group">
+                                <label for="">Password</label>
+                                <input id="pass" class="form-control" type="password" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Confirmar Password</label>
+                                <input id="conpass" class="form-control" type="password" readonly>
+                            </div>
+                            <button id="modificar" type="submit" class="btn btn-secondary">Modificar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/misesion.js"></script>
